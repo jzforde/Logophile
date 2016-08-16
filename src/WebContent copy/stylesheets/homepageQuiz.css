@@ -1,0 +1,50 @@
+
+
+
+
+#button{
+    visibility: hidden;
+    transition-delay: 7s;
+    transition-property:all;
+}
+.button {
+    display: inline-block;
+    padding: 1em;
+    background-color: #6600ff;
+    text-decoration: none;
+    color: white;
+    margin-left: 524px;
+    margin-top: 450px;
+    max-width: 100%;
+    width: 200px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 25px;
+    box-shadow: 10px 10px 5px #888888;
+    
+}
+h1{
+	background-color: white;
+	font-family: 'Varela Round', sans-serif;
+	text-align: center;
+	margin-top: -250px;
+    left: -15px;
+	font-size: 36px;
+	max-width: 100%;
+	position: relative;
+    -webkit-animation-delay: 6s; /* Chrome, Safari, Opera */
+    -moz-animation-delay:6s;
+    animation-delay: 6s;
+   }
+
+span#logophile{
+    font-size:36px;
+    font-family: 'Lobster', cursive;
+    color: #00FF99;
+}
+
+
+
+
+
+

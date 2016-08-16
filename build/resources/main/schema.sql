@@ -1,0 +1,21 @@
+
+CREATE TABLE questions(
+            id INTEGER NOT NULL AUTO_INCREMENT,
+            question VARCHAR NOT NULL,
+            PRIMARY KEY(id));
+
+   CREATE TABLE options(
+            id INTEGER NOT NULL AUTO_INCREMENT ,
+            correct_answer BOOLEAN,
+            option VARCHAR,
+            quiz_id INTEGER NOT NULL,
+            FOREIGN KEY  (quiz_id) REFERENCES questions(id),
+            PRIMARY KEY(id));
+
+    CREATE TABLE user_answers(
+                id INTEGER NOT NULL,
+                quiz_id INTEGER NOT NULL,
+                selected_option INTEGER NOT NULL,
+                FOREIGN KEY  (selected_option) REFERENCES options(id),
+                FOREIGN KEY  (quiz_id) REFERENCES options(id),
+                PRIMARY KEY(id));
