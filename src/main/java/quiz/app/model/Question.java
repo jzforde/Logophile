@@ -1,27 +1,31 @@
 package quiz.app.model;
 
-import javax.persistence.*;
 import java.util.List;
 
-/**
- * Created by jillianforde on 7/19/16.
- */
-
-@Entity
 public class Question {
-    @Id
-    @Column(name = "id")
-    private int questionId;
 
-    @Column(name = "question")
+    private int questionId;
     private String question;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "OPTIONS",
-            joinColumns = @JoinColumn(name = "ID"),
-            inverseJoinColumns = @JoinColumn(name = "QUIZ_ID")
-    )
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Question question = (Question) o;
+
+        return getQuestionId() == question.getQuestionId();
+
+    }
+
+    @Override
+    public int hashCode() {
+        return getQuestionId();
+    }
+
+    public Question() {
+    }
+
     private List<Option> options;
 
     private String givenAnswer;

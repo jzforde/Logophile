@@ -11,14 +11,13 @@ import quiz.app.model.Quiz;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by jillianforde on 7/19/16.
- */
+
 @Controller
 public class QuizController {
 
     private Map<String, Object> map = new HashMap<>();
 
+    //mapping to bring user to the first question in the quiz
     @RequestMapping("/start.do")
     public ModelAndView start()
     {
@@ -28,7 +27,7 @@ public class QuizController {
         return new ModelAndView("start-quiz", "thisMap", this.map);
     }
 
-
+    //mapping to bring user to the welcome page of the quiz
     @RequestMapping("/quiz")
     public String quizStart(ModelMap modelMap){
             Quiz quiz = new QuizEngine();
@@ -37,6 +36,7 @@ public class QuizController {
             return "homepageQuiz";
     }
 
+    //
     @RequestMapping(value = "/next.do", method = RequestMethod.POST)
     public ModelAndView next(@RequestParam String option)
     {
@@ -50,8 +50,6 @@ public class QuizController {
         map.put ("index", i);
         return new ModelAndView("start-quiz", "thisMap", map);
     }
-
-
 
 
 

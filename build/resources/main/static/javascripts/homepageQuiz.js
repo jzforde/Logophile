@@ -1,4 +1,5 @@
 
+
 var words = ['oeuvre', 'nostomania', 'frigorific', 'vespertide', 'bovarism', 'apocryphal',
 'chiaroscuro','rufescent','clowder','gossamer','hoyden','comeuppance'];
 	var w = window.innerWidth;

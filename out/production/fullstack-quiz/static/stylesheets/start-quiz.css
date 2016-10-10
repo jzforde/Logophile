@@ -1,0 +1,29 @@
+#main{
+	/*margin-left: 250px;*/
+	margin-top: 200px;
+	border: 2px solid #6600ff;
+	background-color: #6600ff;
+	padding-left: 450px;
+}
+
+ol{
+	font-family: 'Hind';
+	font-size: 20px;
+	color:#ffffff;
+	
+}
+h2{
+	margin-left: 25px;
+	font-family: 'Pacifico',serif;
+}
+div h3{
+	font-size: 35px;
+	margin-left: -115px;
+	color: #ffffff;
+}
+input[type="radio"] {
+  margin-right: 10px;
+  
+  
+  padding: 40px;
+}

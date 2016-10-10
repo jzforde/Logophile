@@ -21,6 +21,9 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile 'org.springframework:spring-jdbc'
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile 'org.springframework.boot:spring-boot-starter'
+    compile 'org.springframework.boot:spring-boot-starter-security'
     compile 'com.h2database:h2'
 }

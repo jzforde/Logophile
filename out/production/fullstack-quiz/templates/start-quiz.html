@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html ng-app="logophile" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<link href='http://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'/>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'/>
+	<link type="text/css" rel="stylesheet" href="stylesheets/cerulean.css"/>
+	<link type="text/css" rel="stylesheet" href="stylesheets/start-quiz.css"/>
+	<title>Page one of quiz</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="javascripts/quizController.js"></script>
+	<meta name="date" content="2016-09-13"/>
+</head>
+<body ng-controller="QuizController">
+	<!--<h2>${thisQuestion.question}</h2>-->
+	<!--<div id="main">-->
+	<!--<form method="post" action="QuizEngine.java">-->
+	<!--<h3>What is the capital of Suriname?</h3>-->
+	<!--<ol>-->
+		<!--<input type="radio" name ="option" value="Paramaribo"> Paramaribo<br>-->
+		<!--<input type="radio" name="option" value="Moengo"> Moengo<br>-->
+		<!--<input type="radio" name="option" value="Albina"> Albina<br>-->
+		<!--<input type="radio" name="option" value="Kourou"> Kourou<br>-->
+		<!--<input type="submit" value="Submit" class="Button btn btn-primary btn-lg">-->
+	<!--</ol>-->
+	<!--</form>-->
+	<!--<h2 th:text="Question # ${thisMap.thisQuiz.questions[thisMap.index].questionId}"></h2>-->
+	<div id="main">
+		<h2>Question #{{ question.questionId }}</h2>
+		<form ng-submit="onSubmit()">
+			<h3>{{ question.question }}</h3>
+			<ol>
+				<li ng-repeat="option in question.options">
+					<input type="radio" name="option" ng-value="option.id" ng-model="form.answer"/>{{option.option}}
+				</li>
+				<input type="submit" value="Submit" class="Button btn btn-primary btn-lg"/>
+			</ol>
+		</form>
+	</div>
+</body>
+</html>

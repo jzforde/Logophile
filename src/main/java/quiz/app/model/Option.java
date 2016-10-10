@@ -1,26 +1,26 @@
 package quiz.app.model;
 
-import javax.persistence.*;
-
 /**
- * Created by jillianforde on 7/19/16.
+ * POJO of an option to a question
  */
-@Entity
+
 public class Option {
-    @Id
     private int id;
-
-    @Column(name="CORRECT_ANSWER")
     private boolean correctAnswer;
-
-    @Column(name="OPTION")
-
     private String option;
-
-
-
-    @Column(name = "quiz_id")
     private int quiz_id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Option() {
+
+    }
 
     public int getQuiz_id() {
         return quiz_id;
@@ -29,7 +29,6 @@ public class Option {
     public void setQuiz_id(int quiz_id) {
         this.quiz_id = quiz_id;
     }
-    //List<Option> options = new ArrayList<>();
 
     public Option(boolean correctAnsr, String optn)
     {
